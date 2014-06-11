@@ -81,12 +81,20 @@ public class AgentConfig extends ZorkaConfig {
         if (boolCfg("zorka.syslog", false)) {
             initSyslogTrapper();
         }
+        
+        if (boolCfg("zorka.consolelog", true)) {
+        	initConsoleTrapper();
+        }
 
         ZorkaLogger.configure(getProperties());
 
         log.info(ZorkaLogger.ZAG_CONFIG, "Starting ZORKA agent " + getProperties().getProperty("zorka.version"));
     }
 
+    private void initConsoleTrapper() {
+    	ConsoleTrapper console = new ConsoleTrapper("zorka");
+    	ZorkaLogger.getLogger().addTrapper(console);
+    }
 
     /**
      * Creates and configures syslogt trapper according to configuration properties

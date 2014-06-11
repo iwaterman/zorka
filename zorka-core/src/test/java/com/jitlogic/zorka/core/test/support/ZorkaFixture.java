@@ -77,7 +77,7 @@ public class ZorkaFixture extends CommonFixture {
                 "zorka.home.dir", "/tmp",
                 "zabbix.enabled", "no",
                 "zorka.hostname", "test",
-                "zorka.filelog", "no",
+                "zorka.filelog", "yes",
                 "zorka.mbs.autoregister", "yes",
                 "spy", "yes"
         );

@@ -34,6 +34,7 @@ import java.util.zip.CRC32;
 public class ZorkaUtil {
 
     private final static ZorkaLog log = ZorkaLogger.getLog(ZorkaUtil.class);
+    private final static boolean isWindows = System.getProperty("os.name").contains("Window");
 
     /**
      * Singleton instance
@@ -746,6 +747,11 @@ public class ZorkaUtil {
 
 
     public static String path(String... components) {
+    	
+    	if(isWindows && components.length == 2) {
+    		return components[1].substring(1);
+    	}
+    	
         StringBuilder sb = new StringBuilder();
 
         for (String s : components) {
