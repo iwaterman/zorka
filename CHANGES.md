@@ -1,3 +1,38 @@
+Zorka 1.0.9 (2014-10-13)
+------------------------
+
+* fix: proper ASM5 instruction set version in ASM class reader;
+* ZICO: pivot (aggregate) view of collected traces;
+* zico-util: improve parallelism of index rebuild op (by sorting host dirs by size);
+
+Zorka 1.0.8 (2014-09-29)
+------------------------
+
+* active checks: fixes, new templates;
+* ZICO UI: many fixes, regexp search;
+
+
+Zorka 1.0.7 (2014-09-05)
+------------------------
+
+* more fixes to ZICO collector;
+* HTTP/SQL/EJB tagging and classification;
+* active checks for Zabbix (makotoiguchi);
+
+
+Zorka 1.0.6 (2014-07-27)
+------------------------
+
+* bugfix release
+
+
+Zorka 1.0.5 (2014-07-22)
+------------------------
+
+* CAS integration;
+* fixes and refactorings;
+
+
 Zorka 1.0.4 (2014-05-27)
 ------------------------
 
